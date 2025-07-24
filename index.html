@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Строй Team - Строительная компания</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <header>
+    <div class="logo">
+  <img src="logo.png" alt="Строй TEAM логотип">
+  <div class="logo-text">
+    <!-- <span class="main">СТРОЙ TEAM</span> -->
+    <span class="sub">СТРОИТЕЛЬНАЯ КОМПАНИЯ</span>
+  </div>
+</div>
+
+    
+    <nav>
+        <a href="#about">О компании</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contacts">Контакты</a>
+        <button onclick="contactUs()">Написать нам</button>
+    </nav>
+</header>
+
+   <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1><span class="highlight">СТРОЙ TEAM</span><br>ВАШ НАДЕЖНЫЙ ПАРТНЕР<br><span class="highlight">В МИРЕ СТРОИТЕЛЬСТВА</span></h1>
+          <div class="timeline">
+    <span>1993</span>
+    <div class="timeline-track">
+        <div class="slider"></div>
+    </div>
+    <span>2025</span>
+</div>
+
+        </div>
+    </section>
+<section id="about" class="experience-block">
+  <div class="experience-content">
+    <div class="experience-left">
+      <h2>ОБШИРНЫЙ ОПЫТ РАБОТЫ —<br>БОЛЕЕ 12 ЛЕТ НА РЫНКЕ</h2>
+    </div>
+    <div class="experience-right">
+      <div class="arrows">
+        <span>▶</span>
+        <span>▶</span>
+        <span>▶</span>
+      </div>
+      <p>
+        Продуктивная работа СтройTEAM включает<br>
+        успешную реализацию широкого спектра проектов –<br>
+        от небольших задач до грандиозных объектов
+      </p>
+    </div>
+  </div>
+</section>
+<section class="goal-section">
+  <h2 class="goal-title">НАША ЦЕЛЬ</h2>
+
+  <!-- Цель 1 -->
+  <div class="goal-row">
+    <div class="goal-text">
+      <div class="goal-number">01</div>
+      <h2>Превосходить ожидания</h2><br>
+      <p>
+        Мы предоставляем высококачественные строительные услуги,<br>
+        строго соблюдая сроки и бюджет
+      </p>
+    </div>
+    <div class="goal-image">
+      <img src="goal1.jpg" alt="Цель 1">
+      <div class="goal-arrows">▶▶▶</div>
+    </div>
+  </div>
+
+  <!-- Цель 2 -->
+  <div class="goal-row reverse">
+    <div class="goal-image">
+      <img src="goal2.jpg" alt="Цель 2">
+    </div>
+    <div class="goal-text">
+      <div class="goal-number">02</div>
+      <h2>Использовать передовые технологии</h2><br>
+      <p>
+        Команда квалифицированных специалистов выполнит задачи<br>
+        и проекты вашей компании на высшем уровне
+      </p>
+    </div>
+  </div>
+</section>
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <h2 class="contact-title">СВЯЗАТЬСЯ<br>С НАМИ</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Имя" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+
+    <!-- Декор слева -->
+    <div class="contact-lines">
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div><br>
+      <div class="line"></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Спасибо! Ваша заявка отправлена.");
+    this.reset();
+  });
+</script>
+    <footer class="footer">
+  <div id="contacts" class="footer-container">
+    <div class="footer-left">
+      <img src="logo.png" alt="СтройTeam логотип" class="footer-logo">
+      <p class="footer-subtext">© 1993–2025 Строительная компания "ООО СтройTEAM". Все права защищены.</p>
+    </div>
+    <div class="footer-right">
+      <h3>КОНТАКТЫ</h3>
+      <p class="footer-phone"> +7 (999) 999-99-99</p>
+      <p class="footer-email">order@stroyteam.com</p>
+    </div>
+</div>
+
+        <!-- <p>© 1993–2025 СтройTEAM. Все права защищены.</p> -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
