@@ -24,7 +24,7 @@ body, html {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
@@ -565,10 +565,14 @@ footer {
     gap: 15px;
 }
 
+.close {
+  display: none;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     #nav-links {
-        display: none; /* Скрываем меню */
+        display: none;
         flex-direction: column;
         gap: 20px;
         position: absolute;
@@ -607,16 +611,14 @@ footer {
         background: transparent;
         cursor: pointer;
     }
-}
-@media (min-width: 769px) {
-  .hero-content {
-    padding-left: 350px;
-    text-align: left;
-    transform: none;
-  }
-}
-@media (max-width: 768px) {
-  .hero-content {
+
+    .hero-content {
+        padding-left: 350px;
+        text-align: left;
+        transform: none;
+    }
+
+    .hero-content {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -656,5 +658,13 @@ footer {
 
   nav button {
     margin-top: 10px;
+  }
+
+  .active {
+    display: flex;
+  }
+
+    .passive {
+    display: none;
   }
 }
