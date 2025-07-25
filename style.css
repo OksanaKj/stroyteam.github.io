@@ -25,6 +25,8 @@ body, html {
 
 header {
     position: fixed;
+    background-color: rgba(17, 17, 17, 0.7); 
+    opacity: 0,3;
     top: 0;
     width: 100%;
     display: flex;
@@ -33,6 +35,10 @@ header {
     align-items: center;
     z-index: 2;
 }
+
+/* header.scrolled {
+  background-color: rgba(17, 17, 17, 0.3); 
+} */
 
 .logo {
     display: flex;
@@ -125,11 +131,11 @@ footer {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .logo img {
-    height: 80px;
+    height: 50px;
     width: auto;
 }
 
@@ -665,6 +671,6 @@ footer {
   }
 
     .passive {
-    display: none;
+    display: flex;
   }
 }
