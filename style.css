@@ -56,7 +56,15 @@ nav button {
     color: #ffeb00;
     padding: 8px 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font: inherit; /* Чтобы кнопка не сбивалась по шрифту */
 }
+
+nav button:hover {
+    background-color: #ffeb00;
+    color: #000;
+}
+
 
 .hero {
     position: relative;
@@ -77,8 +85,9 @@ nav button {
     position: relative;
     z-index: 1;
     top: 40%;
-    text-align: left;
-    padding: 0 0 0 350px;
+    left: 0;
+  transform: none;
+  padding: 0 0 0 350px;
 }
 
 .hero-content h1 {
@@ -274,6 +283,7 @@ footer {
 
 .goal-row {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -387,6 +397,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin: -10px;
 }
 
 .contact-lines .line {
@@ -395,6 +406,24 @@ footer {
   background-color: #ffeb00;
   transform: skewY(-30deg);
 }
+
+.goal-lines {
+  position: absolute;
+  top: 70px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: -10px;
+}
+
+.goal-lines .line {
+  width: 50px;
+  height: 2px;
+  background-color: #f2e01e;
+  transform: skewY(-40deg);
+}
+
 .footer {
   background-color: #121212;
   color: #fff;
@@ -407,7 +436,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: left;
 }
 
 .footer-left {
@@ -426,7 +455,7 @@ footer {
 .footer-subtext {
   color: #d6c736;
   font-size: 10px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 1px;
 }
 
@@ -442,6 +471,7 @@ footer {
   font-weight: 600;
   color: #ddd;
   margin: 4px 0;
+ 
 }
 @media (max-width: 768px) {
   .footer-container {
@@ -452,7 +482,179 @@ footer {
 
   .footer-right {
     text-align: left;
+    width: 100%;
+  }
+
+  .footer-left,
+  .footer-right {
+    padding-left: 0; /* убираем отступы */
   }
 }
 
 
+/* мобильный */
+@media (max-width: 768px) {
+    /* Логотип */
+    .logo img {
+        height: 30px;
+    }
+
+    /* Меню */
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    /* Герой-блок */
+    .hero-content h1 {
+        font-size: 1.8em;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* Контент */
+    .experience-content,
+    .goal-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .goal-image img {
+        width: 80%;
+    }
+
+    /* Форма */
+    .contact-form input,
+    .contact-form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Футер */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Стили для бургер-меню */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffeb00;
+    border-radius: 5px;
+}
+
+/* Скрываем ссылки меню по умолчанию на мобильных устройствах */
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none; /* Скрываем меню */
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #111;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        display: flex; /* Показываем меню */
+    }
+
+    .menu-icon {
+        display: flex; /* Показываем иконку бургер-меню */
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav button {
+        padding: 12px;
+        width: 100%;
+        border: 1px solid #ffeb00;
+        color: #ffeb00;
+        background: transparent;
+        cursor: pointer;
+    }
+}
+@media (min-width: 769px) {
+  .hero-content {
+    padding-left: 350px;
+    text-align: left;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+    line-height: 1.4;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul#nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav button {
+    margin-top: 10px;
+  }
+}
