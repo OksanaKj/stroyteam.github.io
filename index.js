@@ -8,6 +8,7 @@ function openMenu() {
     const close = document.querySelector('.close');
 
     burger.classList.toggle('active');
+    burger.classList.toggle('passive');
     navLinks.classList.toggle('active');
     close.classList.toggle('active');
 }

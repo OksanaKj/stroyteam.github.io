@@ -480,21 +480,7 @@ footer {
  
 }
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-
-  .footer-right {
-    text-align: left;
-    width: 100%;
-  }
-
-  .footer-left,
-  .footer-right {
-    padding-left: 0; /* убираем отступы */
-  }
+  
 }
 
 
@@ -544,8 +530,9 @@ footer {
     /* Футер */
     .footer-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
+      
     }
 }
 
@@ -574,6 +561,12 @@ footer {
 .close {
   display: none;
 }
+
+.hide {
+  display: none !important;
+}
+
+
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
@@ -668,9 +661,31 @@ footer {
 
   .active {
     display: flex;
+    opacity: 1;
   }
 
     .passive {
-    display: flex;
+    opacity: 0;
   }
+
+  .logo-text .sub {
+    color: #ffeb00;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+}
+
+.goal-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.goal-row.reverse {
+    flex-direction: column-reverse;
+}
+
 }
