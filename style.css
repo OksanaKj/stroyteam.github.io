@@ -566,6 +566,14 @@ footer {
   display: none !important;
 }
 
+.footer-subtext-desc {
+  display: block;
+}
+
+.footer-subtext-mob {
+  display: none;
+}
+
 
 
 /* Адаптивность для мобильных устройств */
@@ -575,9 +583,9 @@ footer {
         flex-direction: column;
         gap: 20px;
         position: absolute;
-        top: 80px;
-        right: 20px;
-        background-color: #111;
+        top: 40px;
+        right: 0;
+        background-color: #1f1f1f;
         padding: 20px;
         border-radius: 10px;
         width: 250px;
@@ -662,10 +670,12 @@ footer {
   .active {
     display: flex;
     opacity: 1;
+    cursor: pointer;
   }
 
     .passive {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
   }
 
   .logo-text .sub {
@@ -686,6 +696,14 @@ footer {
 
 .goal-row.reverse {
     flex-direction: column-reverse;
+}
+
+.footer-subtext-desc {
+  display: none;
+}
+
+.footer-subtext-mob {
+  display: block;
 }
 
 }
